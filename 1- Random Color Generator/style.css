@@ -8,19 +8,12 @@
 
 body {
   height: 100vh;
+  justify-content: center;
 }
 
 body,
 main {
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-main {
   flex-direction: column;
-}
-
-h1 {
-  font-weight: bold;
+  align-items: center;
 }
