@@ -4,8 +4,7 @@ const button = document.querySelector("button");
 
 button.addEventListener("click", () => {
   const color = generateColor();
-  body.style.backgroundColor = color;
-  h1.innerText = color;
+  setColor(color);
 });
 
 const generateColor = () => {
@@ -14,4 +13,9 @@ const generateColor = () => {
   const b = Math.floor(Math.random() * 256);
 
   return `rgb(${r}, ${g}, ${b})`;
+};
+
+const setColor = (color) => {
+  body.style.backgroundColor = color;
+  h1.innerText = color;
 };
