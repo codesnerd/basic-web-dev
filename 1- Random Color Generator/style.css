@@ -9,6 +9,8 @@
 body {
   height: 100vh;
   justify-content: center;
+
+  transition: background-color 1s;
 }
 
 body,
