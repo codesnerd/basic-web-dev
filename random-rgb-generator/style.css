@@ -22,8 +22,11 @@ main {
 
 main {
   justify-content: space-evenly;
-  width: 30em;
-  height: 18em;
+  width: 460px;
+  height: 250px;
+
+  text-align: center;
+  padding: 0 2em;
 
   border-radius: 1em;
   background: rgba(255, 255, 255, 0.2);
