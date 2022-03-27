@@ -49,7 +49,7 @@ const resetTooltipText = () => {
 };
 
 h1.addEventListener("click", () => {
-  if (isColorSet) {
+  if (isColorSet && span.innerText !== "Copied") {
     copyToClipboard(h1.innerText);
     setInnerText(span, "Copied");
   }
