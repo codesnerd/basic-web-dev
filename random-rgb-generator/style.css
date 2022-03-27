@@ -46,6 +46,17 @@ a {
   color: inherit;
 }
 
+/* Tooltip Styles */
+
+h1 {
+  cursor: default;
+}
+
+.tooltip-before-color {
+  visibility: hidden;
+  display: inline-block;
+}
+
 /* Media Queries */
 
 @media all and (max-width: 850px) {
@@ -83,7 +94,7 @@ a {
     font-size: 1em;
   }
 
-  article {
+  article:nth-last-child(1) {
     font-size: 0.9em;
   }
 }
@@ -101,7 +112,7 @@ a {
     font-size: 0.9em;
   }
 
-  article {
+  article:nth-last-child(1) {
     font-size: 0.8em;
   }
 }
