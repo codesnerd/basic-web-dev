@@ -46,11 +46,11 @@ a {
   color: inherit;
 }
 
-/* Tooltip Styles */
-
 h1 {
   cursor: default;
 }
+
+/* TOOLTIP STYLES */
 
 .tooltip-before-color-set,
 .tooltip-after-color-set {
@@ -72,7 +72,7 @@ h1:hover + .tooltip-after-color-set {
   border-radius: 0.6em;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
 
 @media all and (max-width: 850px) {
   main {
