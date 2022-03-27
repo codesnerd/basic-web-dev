@@ -52,9 +52,24 @@ h1 {
   cursor: default;
 }
 
-.tooltip-before-color {
+.tooltip-before-color-set,
+.tooltip-after-color-set {
   visibility: hidden;
   display: inline-block;
+  font-size: 0.7em;
+  padding: 0.3em 0.5em;
+  margin-top: 0.7em;
+}
+
+h1:hover + .tooltip-after-color-set {
+  visibility: visible;
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 0.3em 0.5em;
+  margin-top: 0.7em;
+  background-color: black;
+  color: white;
+  border-radius: 0.6em;
 }
 
 /* Media Queries */
