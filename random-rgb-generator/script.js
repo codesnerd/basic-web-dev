@@ -6,8 +6,7 @@ const button = document.querySelector("button");
 let isColorSet = false;
 
 button.addEventListener("click", () => {
-  const color = generateColor();
-  setColor(color);
+  setColor();
 
   h1.style.cursor = "pointer";
 
@@ -16,36 +15,52 @@ button.addEventListener("click", () => {
 
 /* SET BACKGROUND COLOR */
 
-const setColor = (color) => {
+const setColor = () => {
+  const color = generateRGBColor();
+
   body.style.backgroundColor = color;
-  h1.innerText = color;
+  setInnerText(h1, color);
 
   isColorSet = true;
 };
 
-const generateColor = () => {
-  const r = Math.floor(Math.random() * 256);
-  const g = Math.floor(Math.random() * 256);
-  const b = Math.floor(Math.random() * 256);
+const generateRGBColor = () => {
+  const r = generateRandomColorValue();
+  const g = generateRandomColorValue();
+  const b = generateRandomColorValue();
 
   return `rgb(${r}, ${g}, ${b})`;
+};
+
+const generateRandomColorValue = () => {
+  return Math.floor(Math.random() * 256);
 };
 
 /* HANDLE 'COPY TO CLIPBOARD' TOOLTIP */
 
 const enableTooltipVisibility = () => {
+  resetTooltipText();
   span.classList.remove("tooltip-before-color-set");
   span.classList.add("tooltip-after-color-set");
-  span.innerText = "Copy to Clipboard";
+};
+
+const resetTooltipText = () => {
+  setInnerText(span, "Copy to Clipboard");
 };
 
 h1.addEventListener("click", () => {
   if (isColorSet) {
     copyToClipboard(h1.innerText);
-    span.innerText = "Copied";
+    setInnerText(span, "Copied");
   }
 });
 
 const copyToClipboard = (h1InnerText) => {
   navigator.clipboard.writeText(h1InnerText);
+};
+
+/* HELPER FUNCTIONS */
+
+const setInnerText = (element, textToSet) => {
+  element.innerText = textToSet;
 };
