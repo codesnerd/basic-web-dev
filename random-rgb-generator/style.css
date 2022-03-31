@@ -61,7 +61,7 @@ h1 {
   margin-top: 0.7em;
 }
 
-h1:hover + .tooltip-after-color-set {
+h1 + .tooltip-after-color-set {
   visibility: visible;
   display: inline-block;
   font-size: 0.7em;
