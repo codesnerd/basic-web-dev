@@ -4,6 +4,7 @@ const span = document.querySelector("span");
 const button = document.querySelector("button");
 
 let isColorSet = false;
+let isCopied = false;
 
 button.addEventListener("click", () => {
   setColor();
@@ -45,11 +46,14 @@ const enableTooltipVisibility = () => {
 };
 
 const resetTooltipText = () => {
-  setInnerText(span, "Copy to Clipboard");
+  if (isCopied) {
+    setInnerText(span, "Copy to Clipboard");
+    isCopied = false;
+  }
 };
 
 h1.addEventListener("click", () => {
-  if (isColorSet && span.innerText !== "Copied") {
+  if (isColorSet && !isCopied) {
     copyToClipboard(h1.innerText);
     setInnerText(span, "Copied");
   }
@@ -57,6 +61,7 @@ h1.addEventListener("click", () => {
 
 const copyToClipboard = (h1InnerText) => {
   navigator.clipboard.writeText(h1InnerText);
+  isCopied = true;
 };
 
 /* HELPER FUNCTIONS */
