@@ -8,10 +8,9 @@ let isCopied = false;
 
 button.addEventListener("click", () => {
   setColor();
+  resetTooltipText();
 
   h1.style.cursor = "pointer";
-
-  enableTooltipVisibility();
 });
 
 /* SET BACKGROUND COLOR */
@@ -21,6 +20,10 @@ const setColor = () => {
 
   body.style.backgroundColor = color;
   setInnerText(h1, color);
+
+  if (!isColorSet) {
+    enableTooltipVisibility();
+  }
 
   isColorSet = true;
 };
@@ -40,7 +43,6 @@ const generateRandomColorValue = () => {
 /* HANDLE 'COPY TO CLIPBOARD' TOOLTIP */
 
 const enableTooltipVisibility = () => {
-  resetTooltipText();
   span.classList.remove("tooltip-before-color-set");
   span.classList.add("tooltip-after-color-set");
 };
