@@ -104,7 +104,7 @@ const copyToClipboard = (h1InnerText) => {
 
 /**
  * Sets innerText of an element.
- * @param {object} element Element whose inner text is to be set
+ * @param {Object} element Element whose inner text is to be set
  * @param {string} textToSet Text to be set
  */
 const setInnerText = (element, textToSet) => {
