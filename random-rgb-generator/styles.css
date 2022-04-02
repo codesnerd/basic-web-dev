@@ -67,7 +67,7 @@ h1 + .tooltip-after-color-set {
   font-size: 0.7em;
   padding: 0.3em 0.5em;
   margin-top: 0.7em;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.37);
   color: white;
   border-radius: 0.6em;
 }
