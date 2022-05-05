@@ -59,7 +59,7 @@ const generateRandomColorValue = () => {
 
 /**
  * Enables tooltip visibility by adding and removing relevant classes from the element.
- * Same h1 heading displays the appliation title and the color (once generated).
+ * Same h1 heading displays the application title and the color (once generated).
  * tooltip-before-color-set class is set when the title is being displayed at the start.
  * tooltip-after-color-set is applied when any color is generated for the first time.
  */
